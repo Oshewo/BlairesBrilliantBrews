@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "blairesbrews:block/witchwood_log_top",
+    "side": "blairesbrews:block/witchwood_log"
+  }
+}

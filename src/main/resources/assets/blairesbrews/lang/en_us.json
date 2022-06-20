@@ -6,5 +6,8 @@
 
 
   "block.blairesbrews.witchwood_log": "Witchwood",
-  "block.blairesbrews.witchwood_planks": "Witchwood Planks"
+  "block.blairesbrews.witchwood_planks": "Witchwood Planks",
+  "block.blairesbrews.brewing_kettle": "Brewing Kettle",
+
+  "itemGroup.blairesbrews.brews": "Blaire's Brilliant Brews"
 }

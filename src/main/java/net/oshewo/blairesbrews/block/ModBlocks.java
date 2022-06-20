@@ -10,6 +10,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.oshewo.blairesbrews.BlairesBrews;
+import net.oshewo.blairesbrews.block.custom.BrewingKettleBlock;
 import net.oshewo.blairesbrews.item.ModItemGroup;
 
 public class ModBlocks {
@@ -18,6 +19,13 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD)), ModItemGroup.BREWS);
     public static final Block WITCHWOOD_PLANKS = registerBlock("witchwood_planks",
             new Block(FabricBlockSettings.of(Material.WOOD)), ModItemGroup.BREWS);
+
+    public static final Block BREWING_KETTLE = registerBlock("brewing_kettle",
+            new BrewingKettleBlock(FabricBlockSettings.of(Material.METAL).strength(2.0f).requiresTool().nonOpaque()), ModItemGroup.BREWS);
+
+
+
+
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

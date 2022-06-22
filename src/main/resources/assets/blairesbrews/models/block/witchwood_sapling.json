@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "blairesbrews:block/witchwood_sapling"
+  }
+}

@@ -1,12 +1,19 @@
 {
   "item.blairesbrews.vague_glass": "Vague Glass",
+  "item.blairesbrews.witchwood_bark": "Witchwood Bark",
+
   "item.blairesbrews.regal_red": "Regal Red",
   "item.blairesbrews.travel_tincture": "Tincture of Travel",
   "item.blairesbrews.travel_tincture_lv2": "Tarard's Tincture of Travel",
 
 
+
   "block.blairesbrews.witchwood_log": "Witchwood",
   "block.blairesbrews.witchwood_planks": "Witchwood Planks",
+  "block.blairesbrews.witchwood_sapling": "Witchwood Sapling",
+  "block.blairesbrews.witchwood_leaves": "Witchwood Leaves",
+
+
   "block.blairesbrews.brewing_kettle": "Brewing Kettle",
 
   "itemGroup.blairesbrews.brews": "Blaire's Brilliant Brews"

@@ -11,6 +11,7 @@ import net.minecraft.util.registry.Registry;
 import net.oshewo.blairesbrews.BlairesBrews;
 import net.oshewo.blairesbrews.block.custom.BrewingKettleBlock;
 import net.oshewo.blairesbrews.item.ModItemGroup;
+import net.oshewo.blairesbrews.world.feature.tree.WitchwoodSaplingGenerator;
 
 public class ModBlocks {
 
@@ -20,8 +21,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD)), ModItemGroup.BREWS);
     public static final Block WITCHWOOD_LEAVES = registerBlock("witchwood_leaves",
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()),ModItemGroup.BREWS);
-    public static final Block WITCHWOOD_SAPLING = registerBlock("witchwood_leaves",
-            new SaplingBlock(,
+    public static final Block WITCHWOOD_SAPLING = registerBlock("witchwood_sapling",
+            new SaplingBlock(new WitchwoodSaplingGenerator(),
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)),ModItemGroup.BREWS);
 
 

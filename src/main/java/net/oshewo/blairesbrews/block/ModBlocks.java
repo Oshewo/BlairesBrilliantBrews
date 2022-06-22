@@ -2,8 +2,7 @@ package net.oshewo.blairesbrews.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -19,6 +18,12 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD)), ModItemGroup.BREWS);
     public static final Block WITCHWOOD_PLANKS = registerBlock("witchwood_planks",
             new Block(FabricBlockSettings.of(Material.WOOD)), ModItemGroup.BREWS);
+    public static final Block WITCHWOOD_LEAVES = registerBlock("witchwood_leaves",
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()),ModItemGroup.BREWS);
+    public static final Block WITCHWOOD_SAPLING = registerBlock("witchwood_leaves",
+            new SaplingBlock(,
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)),ModItemGroup.BREWS);
+
 
     public static final Block BREWING_KETTLE = registerBlock("brewing_kettle",
             new BrewingKettleBlock(FabricBlockSettings.of(Material.METAL).strength(2.0f).requiresTool().nonOpaque()), ModItemGroup.BREWS);

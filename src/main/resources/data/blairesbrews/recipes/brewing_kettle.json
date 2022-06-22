@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "R": {
+      "item": "minecraft:bucket"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "pattern": [
+    "TRT",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "item": "blairesbrews:brewing_kettle"
+  }
+}

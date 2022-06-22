@@ -10,13 +10,19 @@ import net.oshewo.blairesbrews.item.custom.ModDrinkItem;
 public class ModItems {
     public static final Item VAGUE_GLASS = registerItem("vague_glass",
             new Item(new FabricItemSettings().group(ModItemGroup.BREWS)));
+
+    public static final Item WITCHWOOD_BARK = registerItem("witchwood_bark",
+            new Item(new FabricItemSettings().group(ModItemGroup.BREWS)));
+
+
     public static final Item REGAL_RED = registerItem("regal_red",
             new ModDrinkItem(new FabricItemSettings().group(ModItemGroup.BREWS).food(ModFoodComponents.REGAL_RED)));
 
     public static final Item TRAVEL_TINCTURE = registerItem("travel_tincture",
         new ModDrinkItem(new FabricItemSettings().group(ModItemGroup.BREWS).food(ModFoodComponents.TRAVEL_TINCTURE)));
 
-    public static final Item TRAVEL_TINCTURE_LV2 = registerItem("travel_tincture_lv2", new ModDrinkItem(new FabricItemSettings().group(ModItemGroup.BREWS).food(ModFoodComponents.TRAVEL_TINCTURE_LV2)));
+    public static final Item TRAVEL_TINCTURE_LV2 = registerItem("travel_tincture_lv2",
+            new ModDrinkItem(new FabricItemSettings().group(ModItemGroup.BREWS).food(ModFoodComponents.TRAVEL_TINCTURE_LV2)));
 
 
 

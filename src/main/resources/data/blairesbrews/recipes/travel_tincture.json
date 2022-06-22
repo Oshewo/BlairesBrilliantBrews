@@ -1,0 +1,20 @@
+{
+  "type": "blairesbrews:brewing_kettle",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:podzol"
+    }
+  ],
+  "output": {
+    "item": "blairesbrews:travel_tincture"
+  }
+}

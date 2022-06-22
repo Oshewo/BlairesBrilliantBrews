@@ -31,6 +31,14 @@ public class BrewingKettleScreen extends HandledScreen<BrewingKettleScreenHandle
         int x = (width-backgroundWidth)/2;
         int y = (height-backgroundHeight)/2;
         drawTexture(matrices,x,y,0,0,backgroundWidth,backgroundHeight);
+
+        if(handler.isCrafting()){
+            drawTexture(matrices, x+112, y+67,176,27, handler.getScaledProgress(),10);
+        }
+
+        if(handler.hasFuel()){
+            drawTexture(matrices,x+8,y+38 + 14 -handler.getScaledFuelProgress(), 176,14- handler.getScaledFuelProgress(),14, handler.getScaledFuelProgress());
+        }
     }
 
     @Override

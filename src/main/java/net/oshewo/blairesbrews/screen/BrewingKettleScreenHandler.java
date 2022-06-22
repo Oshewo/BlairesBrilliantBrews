@@ -5,6 +5,8 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ArrayPropertyDelegate;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.oshewo.blairesbrews.screen.slot.ModFuelSlot;
@@ -12,15 +14,17 @@ import net.oshewo.blairesbrews.screen.slot.ModResultSlot;
 
 public class BrewingKettleScreenHandler extends ScreenHandler {
     private final Inventory inventory;
+    private final PropertyDelegate propertyDelegate;
 
     public BrewingKettleScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(7));
+        this(syncId, playerInventory, new SimpleInventory(7), new ArrayPropertyDelegate(4));
     }
-    public BrewingKettleScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
+    public BrewingKettleScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
         super(ModScreenHandlers.BREWING_KETTLE_SCREEN_HANDLER, syncId);
         checkSize(inventory,7);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
+        this.propertyDelegate = delegate;
 
         this.addSlot(new ModFuelSlot(inventory, 0,8,55));
         this.addSlot(new Slot(inventory, 1,52,65));
@@ -32,9 +36,33 @@ public class BrewingKettleScreenHandler extends ScreenHandler {
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
+
+        addProperties(delegate);
     }
 
+    public boolean isCrafting(){
+        return propertyDelegate.get(0) > 0;
+    }
 
+    public boolean hasFuel(){
+        return propertyDelegate.get(2) > 0;
+    }
+
+    public int getScaledProgress(){
+        int progress = this.propertyDelegate.get(0);
+        int maxProgress = this.propertyDelegate.get(1);
+        int progressArrowSize = 34;
+
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledFuelProgress(){
+        int fuelProgress = this.propertyDelegate.get(2);
+        int maxFuelProgress = this.propertyDelegate.get(3);
+        int fuelProgressSize = 14;
+
+        return maxFuelProgress !=0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
+    }
 
     @Override
     public boolean canUse(PlayerEntity player) {

@@ -13,6 +13,8 @@ public class BlairesClientMod implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BREWING_KETTLE, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WITCHWOOD_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WITCHWOOD_SAPLING, RenderLayer.getCutout());
 
         ScreenRegistry.register(ModScreenHandlers.BREWING_KETTLE_SCREEN_HANDLER, BrewingKettleScreen::new);
     }

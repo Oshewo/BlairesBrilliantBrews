@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 import net.oshewo.blairesbrews.block.ModBlocks;
 import net.oshewo.blairesbrews.block.entity.ModBlockEntities;
 import net.oshewo.blairesbrews.item.ModItems;
+import net.oshewo.blairesbrews.recipe.ModRecipes;
+import net.oshewo.blairesbrews.screen.ModScreenHandlers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +22,8 @@ public class BlairesBrews implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModBlockEntities.registerAllBlockEntities();
+		ModRecipes.registerRecipes();
+
+		ModScreenHandlers.registerAllScreenHandlers();
 	}
 }
